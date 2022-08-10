@@ -1,0 +1,36 @@
+/**
+ * @name app_config_env
+ * @description Environment Configurations
+ */
+
+const config = {
+    app: {
+        environment: 'development', // environment: development, production
+        port: 41020, // process port
+        url: 'http://localhost:41020'
+    },
+
+    database: {
+        hostname: 'localhost:27017',
+        name: 'retail-eye',
+        username: null,
+        password: null,
+        replicaSet: null,
+        connectionTimeoutMS: 6000
+    },
+
+    aws: {
+        auth: {
+            region: 'us-east-1',
+            accessKey: '',
+            secretKey: ''
+        },
+        ses: {
+            from: 'hello@tangotech.co.in'
+        }
+    },
+    
+    integrations: ['shopeye']
+};
+
+module.exports = config;
